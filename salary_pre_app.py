@@ -4,9 +4,10 @@ from matplotlib import pyplot as plt # use for Non Interactive graph
 from plotly import graph_objs as go
 from sklearn.linear_model import LinearRegression
 import numpy as np
+
 st.set_option('deprecation.showPyplotGlobalUse', False) #You can disable this warning by disabling the config option:
 st.title("salary predictor")
-data=pd.read_csv("salary_data.csv")
+data=pd.read_csv("./salary_data.csv")
 x= np.array(data["YearsExperience"]).reshape(-1,1)
 
 lr = LinearRegression()
